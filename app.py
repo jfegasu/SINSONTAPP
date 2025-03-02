@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 from flask import Flask , render_template
+=======
+from flask import Flask,render_template 
+>>>>>>> Stashed changes
 from flask_cors import CORS
 from admin.routes import admin 
 from park.routes import parq
