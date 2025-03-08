@@ -1,0 +1,5 @@
+rol,padre,nombre,ruta
+admin,admin,ADMINISTRADOR,/admin
+admin,admin,PARQUEADERO,/parq
+admin,admin,ENTRADA,/admin
+

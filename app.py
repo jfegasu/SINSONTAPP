@@ -1,9 +1,10 @@
 from flask import Flask , render_template
+import pandas as pd
 
 from flask_cors import CORS
-from admin.routes import admin 
-from park.routes import parq
-from piscina.routes import pisc
+from admin import admin 
+# from park.routes import parq
+# from piscina.routes import pisc
 # importar el Blueprint 
 # Crear la aplicación Flask 
 app = Flask(__name__) 
@@ -20,6 +21,7 @@ def banner():
     return render_template("banner.html")
 @app.route("/menu")
 def menu():
+    menus=pd.read_csv("menu.csv",header=True)
     return render_template("menu.html")
 @app.route("/footer")
 def footer():
