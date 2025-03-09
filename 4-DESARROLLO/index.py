@@ -1,4 +1,5 @@
 from flask import Flask,Blueprint, render_template 
+import pandas as pd
 from flask_cors import CORS
 from admin.routes import admin 
 # importar el Blueprint 
@@ -12,7 +13,15 @@ def raiz():
     return render_template('index.html')
 @app.route('/menu') 
 def menu(): 
-    return render_template('menu.html')
+    menu = []
+    a = pd.read_csv('menu.csv')
+
+    # Convert all rows to a list of lists (faster approach)
+    menu = a.values.tolist()
+
+    print(menu)
+
+    return render_template('menu.html',menus=menu)
 @app.route('/banner') 
 def banner(): 
     return render_template('banner.html')
