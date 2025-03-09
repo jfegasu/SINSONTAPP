@@ -1,6 +1,6 @@
 rol,tipo,nom,ruta,des
-admin,0,ADMINISTRADOR,/menu,
-admin,0,ADMINIS,/admin,
-admin,0,PARQUEADERO,/parq,
-admin,0,ENTRADA,/admin,
+admin,0,ADMINISTRADOR,/admin,centro
+admin,0,ADMINIS,/centro,centro
+admin,0,PARQUEADERO,/banner,centro
+admin,0,ENTRADA,/footer,centro
 

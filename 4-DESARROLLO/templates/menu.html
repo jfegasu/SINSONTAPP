@@ -5,9 +5,10 @@
     <center><h3 class="caret-sombra-red">CONDOMINIO PALMANOVA-SINSONTE</h3></center>
  <hr>
 <div class="container">  
- <p class="sena-color sena-sombra">MENU PRINCIPAL</p> 
+  <div class="div1">
+ <p class="sena-text-yellow" style="color:yellow;">MENU PRINCIPAL</p> 
 {%for i in menus %}
-<button class="btn btn-outline-primary" onclick="{{i[3]}}">{{i[2]}}</button><br>
+<a class="btn btn-outline-warning" style="width:100%;" href="{{i[3]}}" target="{{i[4]}}">{{i[2]}}</a><br>
 {% endfor %}
 </ul>
 <!--  
