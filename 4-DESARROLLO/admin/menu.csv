@@ -1,0 +1,6 @@
+rol,tipo,nom,ruta,des
+admin,0,UNIDADES RESIDENCIALES,/admin,centro
+admin,0,APARTAMENTOS,/parq,centro
+admin,0,CARTERA,/pisc,centro
+admin,0,REGRESAR,/menu,menu
+

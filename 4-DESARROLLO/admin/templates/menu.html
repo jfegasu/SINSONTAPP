@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<hr>
+    <center><h3 class="caret-sombra-red">CONDOMINIO PALMANOVA-SINSONTE</h3></center>
+ <hr>
+<div class="container">  
+  <div class="div1">
+ <p class="sena-text-yellow texto3d" >MENU ADMINISTRACION</p> 
+{%for i in menus %}
+<a class="btn btn-outline-warning" style="width:100%;" href="{{i[3]}}" target="{{i[4]}}">{{i[2]}}</a><br>
+{% endfor %}
+
+</div>
+</div>
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+
+{% endblock content %}
+
