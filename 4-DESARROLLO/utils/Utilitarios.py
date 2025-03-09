@@ -12,6 +12,7 @@ import mimetypes
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.message import EmailMessage
+import sqlite3
 
 
 
@@ -149,4 +150,14 @@ def CorreosHTML(Para,Asunto,Cuerpo):
         server.quit()
         print("Correo enviado exitosamente")
     except Exception as e:
-        print(f"Error al enviar el correo: {e}")      
+        print(f"Error al enviar el correo: {e}")    
+
+def CargaMenu(rol):
+    conn = sqlite3.connect('database/sinsonteapp.db')
+    cursor = conn.cursor()
+    sql="select * from menu where rol='"+rol+"'"
+    sql1=(rol)
+    cursor.execute(sql)
+    output = cursor.fetchall() 
+    return output
+  

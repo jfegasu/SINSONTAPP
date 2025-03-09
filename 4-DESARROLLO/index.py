@@ -5,6 +5,7 @@ from admin.routes import admin
 from entrada.routes import entra 
 from park.routes import parq 
 from piscina.routes import pisc 
+from utils.Utilitarios import CargaMenu
 # importar el Blueprint 
 # Crear la aplicación Flask 
 app = Flask(__name__) 
@@ -19,11 +20,12 @@ def raiz():
     return render_template('index.html')
 @app.route('/menu') 
 def menu(): 
-    menu = []
-    a = pd.read_csv('menu.csv')
+    # menu = []
+    # a = pd.read_csv('menu.csv')
 
-    # Convert all rows to a list of lists (faster approach)
-    menu = a.values.tolist()
+    # # Convert all rows to a list of lists (faster approach)
+    # menu = a.values.tolist()
+    menu=CargaMenu('admin')
 
     print(menu)
 
