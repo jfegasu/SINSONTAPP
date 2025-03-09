@@ -25,10 +25,18 @@ def menu():
 
     # # Convert all rows to a list of lists (faster approach)
     # menu = a.values.tolist()
-    menu=CargaMenu('admin')
+    menu=CargaMenu('root')
 
     print(menu)
 
+    return render_template('menu.html',menus=menu)
+@app.route('/adm')
+def admin():
+    menu=CargaMenu('admin')
+    return render_template('menu.html',menus=menu)
+@app.route('/park')
+def park():
+    menu=CargaMenu('park')
     return render_template('menu.html',menus=menu)
 @app.route('/banner') 
 def banner(): 
