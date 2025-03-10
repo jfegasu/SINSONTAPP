@@ -38,6 +38,10 @@ def admin():
 def park():
     menu=CargaMenu('park')
     return render_template('menu.html',menus=menu)
+@app.route('/pisci')
+def pisc():
+    menu=CargaMenu('pisc')
+    return render_template('menu.html',menus=menu)
 @app.route('/banner') 
 def banner(): 
     return render_template('banner.html')
