@@ -1,0 +1,147 @@
+
+<!doctype html>
+<html class="no-js" ng-app="cobis-cwc-container" ng-strict-di>
+
+<head>
+    <!-- Favicon Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+    <link rel="icon" type="img/png" ng-href="/CWC/services/cobis/web/assets/img/favicon.png" />
+
+    <script type="text/javascript">
+        sessionStorage.setItem('debuggingMode',true);
+        var min = '.min';
+        sessionStorage.setItem('debuggingMode',true);
+        if (sessionStorage && sessionStorage.getItem('debuggingMode') === 'true') {
+            min = '';
+        }
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title translate>FNA</title>
+
+    <!-- To disable compatibility mode in Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Mobile tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimun-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. -->
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+
+    <meta name="description" content="">
+    <meta name="google" value="notranslate">
+
+
+    <!-- Styles -->
+    <link href="/CWC/services/cobis/web/styles/kendo/kendo.common.min.css" rel="stylesheet">
+    <link href="/CWC/services/cobis/web/styles/kendo/kendo.silver.min.css" rel="stylesheet">
+    <link href="/CWC/services/cobis/web/styles/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/CWC/services/cobis/web/styles/kiui/kiui.min.css" rel="stylesheet" />
+    <link href="/CWC/services/cobis/web/scripts/lib/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link href="/CWC/services/cobis/web/scripts/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link id="style-ib-container" rel="stylesheet" ng-if="defaultTheme" ng-href="/CWC/services/cobis/web/styles/{{defaultTheme}}.css" />
+
+    <link id="style-fna" rel="stylesheet" ng-href="/CWC/services/cobis/web/styles/fna/css/fna.css" />	
+    <link id="style-fna-ext" rel="stylesheet" ng-href="/CWC/services/cobis/web/styles/fna/css/style.css" />
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/jquery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/jquery/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/kendo/kendo.web.min.js"></script>
+
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular/angular.min.js"></script>
+    
+    <script type="text/javascript" src="/CWC/services/cobis/web/styles/fna/scripts/angular-locale_es-co.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular/angular-translate.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular/angular-translate-loader-partial.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular/angular-translate-storage-local.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular/angular-translate-storage-cookie.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular/angular-cookies.min.js"></script>
+
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/kendo/kendo.angular.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/kiui/kiui.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular/angular-idle.js"></script>    
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+        document.write("<script type='text/javascript' src='/CWC/services/cobis/web/scripts/commons/cobis.commons" + min + ".js'></scrip" + "t>");
+        document.write("<script type='text/javascript' src='/CWC/services/cobis/web/scripts/commons/module.cobis" + min + ".js'></scrip" + "t>");
+    </script>
+
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/ngstorage/ngStorage.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/angular-cache-buster/angular-cache-buster.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/bxslider/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="/CWC/services/cobis/web/scripts/lib/script/script.js"></script>
+
+	<script type="text/javascript">
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/config/app.config" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/app.module" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/handlers/state.handler" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/app.constants" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/app.state" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/services/auth.jwt.service" + min + ".js'></scrip" + "t>");
+    document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/services/auth.service" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/config/http.config" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/config/interceptor/auth.interceptor" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/config/interceptor/auth-expired.interceptor" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/config/interceptor/auth-error.interceptor" + min + ".js'></scrip" + "t>");
+    document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/services/container.configuration.service" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/controller/list.error.controller" + min + ".js'></scrip" + "t>");
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/scripts/commons/keep.alive" + min + ".js'></scrip" + "t>");
+
+    document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/services/otp.service" + min + ".js'></scrip" + "t>");    
+	document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/services/genformretces.service" + min + ".js'></scrip" + "t>");
+    document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/services/asigncla.service" + min + ".js'></scrip" + "t>");
+    document.write("<script type='text/javascript' src='/CWC/services/cobis/web/app/services/contract.service" + min + ".js'></scrip" + "t>");
+	</script>
+    
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="container-wrapper">
+        <header ui-view="header" ng-cloak>
+            <div id="header-content" ng-include="'views/commons/tpl-container-header.html'"/>
+            
+        </header>
+
+        <main class="">
+            <div ui-view="content"></div>
+        </main>
+
+        <footer ng-cloak>
+            <div id="footer-content" ng-include="'views/commons/tpl-container-footer.html'"/>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+   $('#content').load("sitioweb.com/cursos");
+
+});
+</script>
+</head>
+<body>
+
+<div id="content"></div>
+
+</body>
+</html>

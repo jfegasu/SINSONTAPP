@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+.primary {background-image: linear-gradient(to right, #007bff, #4ab2e2);} 
+.primary:hover {background-image: linear-gradient(to right, #0b7dda, #4ab2e2);}
+.secondary {background-image: linear-gradient(to right, #6c757d, #adb5bd);} 
+.secondary:hover {background-image: linear-gradient(to right, #848b92, #adb5bd);}
+.success {background-image: linear-gradient(to right, #28a745, #56c150);} 
+.success:hover {background-image: linear-gradient(to right, #34b556, #56c150);}
+.warning {background-image: linear-gradient(to right, #ffc107, #ffda4e);} 
+.warning:hover {background-image: linear-gradient(to right, #ffb200, #ffda4e);}
+.danger {background-image: linear-gradient(to right, #dc3545, #e0666e);} 
+.danger:hover {background-image: linear-gradient(to right, #d32838, #e0666e);}
+
 html {
     --scrollbarBG: #f1f5f7;
     --thumbBG: #39A900;
@@ -44,6 +55,48 @@ html {
     width: 300px;
 
   }
+  .sena-menu{
+      width:100%;
+      display: block;
+      margin-bottom: 5px;
+      border: 1px solid #23281E;
+      -webkit-border-radius: 0px 0px 5px 5px;
+      -moz-border-radius: 0px 0px 5px 5px;
+      -khtml-border-radius: 0px 0px 5px 5px;
+      border-radius: 0px 0px 5px 5px;
+      border-radius: 15px 10px 10px 15px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      padding-left: 10px;
+      }
+.sena-menu.a{
+  width: 100%;
+      }  
+.sena-menu.a:after{
+  background-color: darkblue;
+}   
+.sena-menu.btns{
+  width: 100%;
+  display:none;
+  margin-bottom: 5px;
+font-weight:400;
+line-height:1.5;
+color:#212529;
+text-align:center;
+text-decoration:none;
+vertical-align:middle;
+cursor:pointer;
+width:100%;
+-webkit-user-select:none;
+-moz-user-select:none;
+user-select:none;
+background-color:transparent;
+border:1px solid transparent;
+padding:.375rem .75rem;font-size:1rem;
+border-radius:.25rem;
+}
+
+
   body::-webkit-scrollbar-track {
     background: var(--scrollbarBG);
   }
@@ -127,6 +180,7 @@ select{
     background-color:#eaf39c;
 }
   .sena-btn:hover{
+  
     background-color:#eaf39c;
     background-color:yellow;
   }
@@ -134,11 +188,13 @@ select{
     background-color:rgb(1, 1, 32);
   }
   .sena-btn {
+  display: block;
+  padding:10px 10px 10px 10px;
   cursor:pointer;    
   background: url("https://siomi.datasena.com/bt1.jpg") no-repeat right center;  
   text-align: center;
-  height: 40px;
-  font-size: 10pt;
+  height: 35px;
+  font-size: 12pt;
   font-weight: bold;
   text-transform: uppercase;
   color: black;
@@ -146,10 +202,10 @@ select{
   -webkit-box-shadow: 10px 10px 5px 0px #ABEBC6;
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 25px 0px #ABEBC6;
-  #padding: 10px 10px 10px 10px;
-  # padding: 10px 0;
-  
-   margin:10,10,10,10;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+
    border:10,10,10,10;
    
    border-radius: 15px 10px 10px 15px;
@@ -158,14 +214,15 @@ select{
   border: 1px solid #000000;
   background-color: rgb(250, 247, 247);
   color:black;
-  vertical-align: middle;;
+  padding: 5px 5px 5px 5px ;
+ 
   }
   .sena-btn,.sena-btns:hover{
     background-color:#eaf39c;
   }
     .sena-btns:hover{
         background-color:#eaf39c;
-        background-color:yellow;
+        background-color:rgb(0, 255, 47);
   }.sena-btns {
     cursor:pointer;    
      text-align: left;
@@ -196,7 +253,8 @@ select{
   }
   .sena-btn:hover{
     background-color:#eaf39c;
-    background-color:yellow;
+    background-color:rgb(32, 167, 6);
+    color:#c8c8c6;
   }
   .sena-btns:hover{
     background-color:yellow;

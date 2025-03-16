@@ -127,16 +127,17 @@ border: 0px;
 }
 .div1{
 
-	background: #131313;
 	z-index: 5;
-	padding: 10px;
+
 	border: 1px solid #23281E;
 	-webkit-border-radius: 0px 0px 5px 5px;
 	-moz-border-radius: 0px 0px 5px 5px;
 	-khtml-border-radius: 0px 0px 5px 5px;
 	border-radius: 0px 0px 5px 5px;
-	#background: url('../image/menu.png');
-
+	border-radius: 15px 10px 10px 15px;
+  padding-bottom: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
 	}
 .div2 {
 

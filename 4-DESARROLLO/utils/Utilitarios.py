@@ -155,9 +155,28 @@ def CorreosHTML(Para,Asunto,Cuerpo):
 def CargaMenu(rol):
     conn = sqlite3.connect('database/sinsonteapp.db')
     cursor = conn.cursor()
-    sql="select * from menu where rol='"+rol+"'"
+    sql="select * from menu where rol='%s'" % rol
     sql1=(rol)
     cursor.execute(sql)
     output = cursor.fetchall() 
     return output
-  
+
+def getRol(login):
+    conn = sqlite3.connect('database/sinsonteapp.db')
+    cursor = conn.cursor()
+    
+    cursor.execute(f"select * from usuario where login='%s'"  % login)
+    output = cursor.fetchone() 
+    return output
+def valideUsuario(login,pw):
+    conn = sqlite3.connect('database/sinsonteapp.db')
+    cursor = conn.cursor()
+    
+    cursor.execute(f"select cla from usuario where login='%s'"  % login)
+    output = cursor.fetchone() 
+    if pw==output:
+        return True
+    else:
+        return False
+    return False
+

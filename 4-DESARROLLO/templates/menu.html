@@ -1,55 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<table>
+  <td colspan="2"><a href="/centro" target="centro"><img loading="lazy" class="tabla" src="{{url_for('static',filename='images/sinsonte2.png')}}" style="border:true;width:50px;border-radius: 25px;height:50px;border-style: outset;border:solid;"></a></td>
+  <td colspan="3"><h3 class="caret-sombra-red">&nbsp;&nbsp;{{titu}}-{{rol}}</h3><hr></td>
+</table>
+<!--https://fonts.google.com/icons?selected=Material+Symbols+Outlined:keyboard_command_key:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f-->
 
-<hr>
-    <center><h3 class="caret-sombra-red">CONDOMINIO PALMANOVA-SINSONTE</h3></center>
- <hr>
-<div class="container">  
-  <div class="div1">
- <p class="sena-text-yellow" >MENU PRINCIPAL</p> 
+  <div class="sena-menu my-2 ">
+<br>
 {%for i in menus %}
-<a class="btn btn-outline-warning" style="width:100%;" href="{{i[4]}}" target="{{i[5]}}">{{i[2]}}</a><br>
+<a class="btn btn-outline-dark " style="width:100%;text-align:left;" href="{{i[4]}}" target="{{i[5]}}"><i class="material-icons">{{i[6]}}</i>{{i[2]}}</a><br>
 {% endfor %}
 </ul>
-<!--  
-<ul id="myUL">
-  <li><span class="caret">📁 <a href="/centro" target="centro">MENÚ PRINCIPAL</a></span>
-    <ul class="nested">
-      <li><span class="caret">&#10133; NOVEDADES</span>
-        <ul class="nested"> 
-          <li><i class='far  fa-window-restore'></i>
-            <a href="/admin" target=centro>ABIERTAS</a>  </li>
-          <li><i class='far fa-window-restore'></i>
-          <a href="/novedadp" target=centro>EN PROCESO</a></li>
-          <li><i class='far  fa-window-restore'></i>
-            <a href="/novedadc" target=centro>CERRADA</a></li>
-    </ul>
-  </li>
-          <li><span class="caret">&#10133; EQUIPAMIENTO</span>
-            <ul class="nested">
-              <li><i class='far fa-window-maximize'></i> <a href="/r/1" target=centro>RESUMEN DEL AMBIENTE</a></li>
-              <li><i class='far fa-window-maximize'></i> <a href="/r/a/1" target=centro>ELEMENTOS DEL AMBIENTE</a></li>
-              <li>&#x1F5F9; NUEVO ELEMENTO</li>
-            </ul>
-          </li>
-  </li>  
-        <li><span class="caret">&#10133; CARGA MASIVA</span>
-            <ul class="nested">
-              <li><i class='fas fa-power-off'></i> ELEMENTOS</li>
-            </ul>
-          </li>
-  
-        <li><span class="caret">&#10133; CONFIGURACION</span>
-            <ul class="nested">
-              <li><i class='fas fa-wrench'></i> CUENTADANTE</li>
-            </ul>
-          </li>
-        </ul>
-  </li>  
-    </ul>
-  </li>
-</ul>
--->
 </div>
 </div>
 <script>
