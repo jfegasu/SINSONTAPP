@@ -171,12 +171,15 @@ def getRol(login):
 def valideUsuario(login,pw):
     conn = sqlite3.connect('database/sinsonteapp.db')
     cursor = conn.cursor()
-    
-    cursor.execute(f"select cla from usuario where login='%s'"  % login)
+    sql=f"select cla from usuario where login='%s'"  % login
+    cursor.execute(sql)
     output = cursor.fetchone() 
-    if pw==output:
+    if output is None:
+        return False
+    # print("********************",output[0])
+    if pw==output[0]:
         return True
     else:
         return False
-    return False
+  
 

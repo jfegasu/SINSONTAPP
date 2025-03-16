@@ -1,4 +1,4 @@
-from flask import Flask,Blueprint, render_template,session,request ,redirect
+from flask import Flask,Blueprint, render_template,session,request ,redirect,url_for
 from flask_session import Session
 import pandas as pd
 from flask_cors import CORS
@@ -29,16 +29,19 @@ def v():
     if request.method == 'POST':
         usua = request.form.get('usua')
         pw = request.form.get('pw')
-    if valideUsuario(usua,pw):
+    esta=valideUsuario(usua,pw)
+    print("****",esta)
+    if esta:
         rolt=getRol(usua)
         session['rol'] = rolt[5]
         session['username']=rolt[2]
-        
+        print("--->",rolt,rolt[2])
         return render_template('index.html')
     else:
         msgito="CLAVE INVALIDA"
-        regreso="/"
-        return render_template('alertas.html',msgito=msgito,regreso=regreso)
+        regreso="/logout"
+        print("Fallo" )
+        return render_template('alertas.html',msgito=msgito)
 
 @app.route('/index',methods=['POST']) 
 def index(): 
@@ -52,7 +55,7 @@ def menu():
     # # Convert all rows to a list of lists (faster approach)
     # menu = a.values.tolist()
     rol=session.get('rol')
-    if count(rol)>0:
+    if rol != None:
         menu=CargaMenu(rol)     
         return render_template('menu.html',menus=menu,titu='MENU PRINCIPAL')
     return redirect("/")
@@ -80,8 +83,7 @@ def footer():
     return render_template('footer.html')
 @app.route('/logout') 
 def logout(): 
-    session.pop('rol')
-    session.pop('username')
+    session.clear()  # This will remove all session data
     return redirect('/')
 
 if __name__=='__main__':
