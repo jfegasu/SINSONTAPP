@@ -11,6 +11,19 @@
 .danger {background-image: linear-gradient(to right, #dc3545, #e0666e);} 
 .danger:hover {background-image: linear-gradient(to right, #d32838, #e0666e);}
 
+.midiv{
+  display:grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 200px 200px 200px;
+  grid-gap: 20px;
+  text-align: center;
+  max-width: 500px;
+}
+.midiv>div{
+  text-align: center;
+  padding-top: 10px;
+
+}
 html {
     --scrollbarBG: #f1f5f7;
     --thumbBG: #39A900;

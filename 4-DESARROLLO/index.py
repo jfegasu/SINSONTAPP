@@ -6,9 +6,9 @@ from admin.routes import admin
 from entrada.routes import entra 
 from park.routes import parq 
 from piscina.routes import pisc 
-from utils.Utilitarios import CargaMenu,getRol,valideUsuario
+from utils.Utilitarios import CargaMenu,getRol,valideUsuario,crearTabla
 # importar el Blueprint 
-# Crear la aplicación Flask 
+# Crear la aplicación Flask **************
 app = Flask(__name__) 
 app.config['SESSION_TYPE'] = 'filesystem'  # Almacena sesiones en archivos
 app.config['SECRET_KEY'] = 'MI_CLAVE_SECRETA'  # Clave para cifrar sesiones
@@ -59,10 +59,13 @@ def menu():
         menu=CargaMenu(rol)     
         return render_template('menu.html',menus=menu,titu='MENU PRINCIPAL')
     return redirect("/")
-@app.route('/adm')
-def admin():
+@app.route('/admin')
+def madm():
     menu=CargaMenu('admin')
-    return render_template('menu.html',menus=menu,titu='MENU ADMINISTRACION')
+    aa=crearTabla('usuario',{"login":"prueba","roll":"root"})
+    # return aa
+    return render_template('admin_tabla.html',aa=aa)
+
 @app.route('/park')
 def park():
     menu=CargaMenu('park')

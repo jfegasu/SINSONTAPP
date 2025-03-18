@@ -181,5 +181,41 @@ def valideUsuario(login,pw):
         return True
     else:
         return False
+def crearTabla(tabla,columns,condicion):
+    conn = sqlite3.connect('database/sinsonteapp.db')
+    cursor = conn.cursor()
+    sql="select "
+    k=0
+    for hay in columns:
+        k=k+1
+    print(k)
+    
+    i=1
+    for key in columns:
+        if i<k:
+            sql+=key+","
+            i=i+1
+        else:
+           sql+=key
+           i=i+1 
+   
+    if condicion is None:
+        sql+=" from "+tabla+" " 
+    else:
+        sql+=" from "+tabla+" where "     
+        i=0
+        for key,value in condicion.items():
+            if i==0:
+                sql+=" "+key+"="+value
+                i=i+1
+            else:
+                sql+=" and "+key+"="+value
+    cursor.execute(sql)
+    output = cursor.fetchall() 
+    row=[]
+    for rows in output:
+        row.append(rows)
+    return row
+    # return sql
   
 
