@@ -215,7 +215,13 @@ def crearTabla(tabla,columns,condicion):
     row=[]
     for rows in output:
         row.append(rows)
-    return row
-    # return sql
-  
+    # return row
+    return sql
+ 
+def Ejecutar(sql):
+    conn = sqlite3.connect('database/sinsonteapp.db')
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    output = cursor.fetchall() 
+    return output 
 

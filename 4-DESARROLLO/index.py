@@ -6,7 +6,7 @@ from admin.routes import admin
 from entrada.routes import entra 
 from park.routes import parq 
 from piscina.routes import pisc 
-from utils.Utilitarios import CargaMenu,getRol,valideUsuario,crearTabla
+from utils.Utilitarios import CargaMenu,getRol,valideUsuario,crearTabla,Ejecutar
 # importar el Blueprint 
 # Crear la aplicación Flask **************
 app = Flask(__name__) 
@@ -62,9 +62,13 @@ def menu():
 @app.route('/admin')
 def madm():
     menu=CargaMenu('admin')
-    aa=crearTabla('usuario',{"login":"prueba","roll":"root"})
+    # aa=crearTabla('usuario',{"login":"prueba","roll":"root"})
+    aux=1
+    sql=f"select * from apartamento where idapartamento=%d" % aux
+    print(sql)
+    aa=Ejecutar(sql)
     # return aa
-    return render_template('admin_tabla.html',aa=aa)
+    return render_template('admin_tabla.html',aa=sql)
 
 @app.route('/park')
 def park():

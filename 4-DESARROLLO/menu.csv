@@ -1,6 +1,0 @@
-rol,tipo,nom,ruta,des
-admin,0,ADMINISTRADOR,/admin   ,menu
-admin,0,PARQUEADERO,/parq,centro
-admin,0,PISCINA,/pisc,centro
-admin,0,ENTRADA,/entra,centro
-
