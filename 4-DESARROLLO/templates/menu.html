@@ -7,10 +7,11 @@
 </table>
 <!--https://fonts.google.com/icons?selected=Material+Symbols+Outlined:keyboard_command_key:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%231f1f1f-->
 
-  <div class="sena-menu my-2 ">
-<br>
+<!-- <div class="sena-menu my-2 ">-->
+  <div class="sena-menu "> 
+    <br>
 {%for i in menus %}
-<a class="btn btn-outline-dark " style="width:100%;text-align:left;" href="{{i[4]}}" target="{{i[5]}}"><i class="material-icons">{{i[6]}}</i>{{i[2]}}</a><br>
+<a style="width:100%;text-align:left;" href="{{i[4]}}" target="{{i[5]}}"><i class="material-icons">{{i[6]}}</i>{{i[2]}}</a><br>
 {% endfor %}
 </ul>
 </div>

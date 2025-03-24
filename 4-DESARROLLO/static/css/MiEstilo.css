@@ -27,10 +27,10 @@
 html {
     --scrollbarBG: #f1f5f7;
     --thumbBG: #39A900;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-family: 'Roboto', Courier, monospace;
+    font-size: x-small;
     font-weight: bold;
-    font-family: "Roboto", sans-serif;
+    font-stretch: condensed;
   }
   body::-webkit-scrollbar {
     width: 21px;
@@ -42,6 +42,10 @@ html {
   table{
     font-size: 12pt;
     font-weight: bold;
+    font-family: 'Roboto', Courier, monospace;
+    font-size: x-small;
+    font-weight: bold;
+    font-stretch: condensed;
   }
   table.th{
     font-size: 14pt;
@@ -72,15 +76,22 @@ html {
       width:100%;
       display: block;
       margin-bottom: 5px;
+      /*
       border: 1px solid #23281E;
+      
       -webkit-border-radius: 0px 0px 5px 5px;
       -moz-border-radius: 0px 0px 5px 5px;
       -khtml-border-radius: 0px 0px 5px 5px;
       border-radius: 0px 0px 5px 5px;
       border-radius: 15px 10px 10px 15px;
+      */
       padding-bottom: 5px;
       padding-right: 10px;
       padding-left: 10px;
+      font-family: 'Roboto', Courier, monospace;
+      font-size: x-small;
+      font-weight: bold;
+      font-stretch: condensed;
       }
 .sena-menu.a{
   width: 100%;

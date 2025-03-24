@@ -7,13 +7,30 @@ admin = Blueprint('admin', __name__, url_prefix='/admin')
 @admin.route('/') 
 def raiz(): 
     # return "ADMIN"
-    col=['rol']
-    vcol=['ROL']
+    
+    vcol=['UNIDAD','APARTAMENTOS X UNIDAD']
     # aa=crearTabla('usuario',col,{"login":"'prueba'"})
     aux=1
-    sql=f"select * from apartamento where idapto=%d" % aux
+    sql=f"SELECT IDUNIDAD,NOMUNIDAD,(SELECT COUNT(*) FROM APARTAMENTO WHERE IDUNIDAD=U.IDUNIDAD) APTO FROM UNIDAD U"
     print(sql)
     aa=Ejecutar(sql)
+    confi=[{
+            "icono":"spoke",
+            "titu":"Editar",
+            "key":0
+            },
+            {
+            "icono":"delete",
+            "titu":"Borrar",
+            "key":1
+            },
+            {
+            "icono":"hotel",
+            "titu":"Apartamentos",
+            "key":1
+            }
+            ]
     
     # aa=crearTabla('usuario',['rol'],None)
-    return render_template('admin_tabla.html',aa=aa,vcol=vcol)
+
+    return render_template('admin_tabla.html',aa=aa,vcol=vcol,i=len(vcol),despla=1,key=0,nivel=0,confi=confi)

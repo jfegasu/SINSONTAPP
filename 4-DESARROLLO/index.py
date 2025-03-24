@@ -68,7 +68,7 @@ def madm():
     print(sql)
     aa=Ejecutar(sql)
     # return aa
-    return render_template('admin_tabla.html',aa=sql)
+    return render_template('admin_tabla.html',aa=sql,vcol=vcol,i=len(vcol))
 
 @app.route('/park')
 def park():
