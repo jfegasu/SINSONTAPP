@@ -96,6 +96,11 @@ html {
 -moz-box-shadow: 14px 10px 20px 11px rgba(0,0,0,0.75);
 box-shadow: 14px 10px 20px 11px rgba(0,0,0,0.75);
     }
+.sena-borde{
+    -webkit-box-shadow: 14px 10px 20px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 10px 20px 11px rgba(0,0,0,0.75);
+    box-shadow: 14px 10px 20px 11px rgba(0,0,0,0.75);
+  }
   .sena>div{
     border:#28a745;
   }
