@@ -20,10 +20,8 @@ app.register_blueprint(admin)
 app.register_blueprint(parq)
 app.register_blueprint(pisc)
 @app.route('/') 
-def raiz(): 
-    
-    
-    return render_template('login.html')
+def raiz():   
+    return render_template('sinsonte5.htm')
 @app.route('/v',methods=['POST']) 
 def v(): 
     if request.method == 'POST':
