@@ -21,6 +21,9 @@ app.register_blueprint(parq)
 app.register_blueprint(pisc)
 @app.route('/') 
 def raiz():   
+    return render_template('index0.html')
+@app.route('/sinsont') 
+def sinsont():   
     return render_template('sinsonte5.htm')
 @app.route('/v',methods=['POST']) 
 def v(): 
