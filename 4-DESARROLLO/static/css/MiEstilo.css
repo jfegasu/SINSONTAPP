@@ -46,12 +46,21 @@ html {
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
   }
   .sena{
+    width: 80%;
     font-size: 10px;
     font-weight: bold;
     align-items: center;
+    border: 1px solid #23281E;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-khtml-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+	border-radius: 15px 10px 10px 15px;
+  padding-bottom: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
   }
   sena>table{
-    width: 90%;
     font-family: 'Roboto', Courier, monospace;
     font-size: x-small;
     font-weight: bold;
@@ -81,8 +90,11 @@ html {
     }
     .sena{
       overflow: auto;
-      width:auto;
-      height:auto;
+      width: 83%;
+      
+-webkit-box-shadow: 14px 10px 20px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: 14px 10px 20px 11px rgba(0,0,0,0.75);
+box-shadow: 14px 10px 20px 11px rgba(0,0,0,0.75);
     }
   .sena>div{
     border:#28a745;
@@ -195,7 +207,7 @@ border-radius:.25rem;
 }
 
 .sena-p100{
-  width:100%;
+  width:90%;
 }
 .select-izquierda{
   align:left;
