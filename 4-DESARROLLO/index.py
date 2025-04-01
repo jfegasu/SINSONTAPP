@@ -39,7 +39,7 @@ def v():
         print("--->",rolt,rolt[2])
         return render_template('index.html')
     else:
-        msgito="CLAVE INVALIDA"
+        msgito="CLAVE O USUARIO INVALIDOS"
         regreso="/logout"
         print("Fallo" )
         return render_template('alertas.html',msgito=msgito)
@@ -68,6 +68,7 @@ def madm():
     sql=f"select * from apartamento where idapartamento=%d" % aux
     print(sql)
     aa=Ejecutar(sql)
+    vcol=""
     # return aa
     return render_template('admin_tabla.html',aa=sql,vcol=vcol,i=len(vcol))
 
